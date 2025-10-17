@@ -12,8 +12,11 @@ from typing import Tuple
 class Controller:
     def __init__(self, distance_threshold: float):
         self.distance_threshold = distance_threshold
+<<<<<<< HEAD
         self.k_cruise = 0.5
         self.k_follow = 0.3
+=======
+>>>>>>> a809f14fd960aa07e4c69f2cb4f27e541317a2b3
 
     def run_step(self, obs: Observation) -> Tuple[float, Mode]:
         """This is the main run step of the controller.
@@ -35,6 +38,7 @@ class Controller:
         desired_speed = obs.desired_speed
         dist_to_lead = obs.distance_to_lead
 
+<<<<<<< HEAD
         # set defaut cruising
         mode = Mode.CRUISING
         acceleration = 0.0
@@ -54,3 +58,8 @@ class Controller:
         acceleration = max(min(acceleration, 10.0), -10.0)
 
         return acceleration, mode
+=======
+        # Do your magic...
+
+        return (-10.0, Mode.FOLLOWING)
+>>>>>>> a809f14fd960aa07e4c69f2cb4f27e541317a2b3
