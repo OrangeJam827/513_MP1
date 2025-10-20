@@ -57,7 +57,6 @@ class Controller:
         else:  # FOLLOWING mode
             distance_error = dist_to_lead - dynamic_safe_distance
             
-            # === Critical fix: prevent stopping when lead vehicle is moving ===
             # Decide behavior based on lead vehicle speed and distance error
             if lead_velocity_est > 0.5:  # Lead vehicle is moving
                 
